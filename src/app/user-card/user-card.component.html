@@ -1,0 +1,15 @@
+@for (data of usersData; track data) {
+    <div class="card" style="width: 18rem; display: inline-block; margin: 20px;">
+        <img [src]="data.image" class="card-img-top" alt="...">
+        <div class="card-body">
+            @if(data.is_verified){
+                <span class="badge text-bg-success">Verified</span>
+            }@else {
+                <span class="badge text-bg-danger">Not verified</span>
+            }
+          <p class="card-text">{{data.username}}</p>
+          <p class="card-text">{{data.email}}</p>
+          <p class="card-text">{{data.phone}}</p>
+        </div>
+      </div>
+}
